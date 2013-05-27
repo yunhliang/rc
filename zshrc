@@ -64,3 +64,49 @@ export WORKON_HOME=~/Envs
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
+
+## Del
+# Delete key (see FreeBSD FAQ on keyboard and mouse)
+bindkey "\e[3~"   delete-char              # xterm
+
+## Home & End
+# Home and End keys for XTerm compatible console
+bindkey "\e[1~"   beginning-of-line        # xterm
+bindkey "\e[4~"   end-of-line              # xterm
+bindkey "^[OH" beginning-of-line           # zsh
+bindkey "^[OF" end-of-line                 # zsh
+
+# git
+alias g='git'
+alias ga='git add'
+alias gs='git status'
+alias gc='git commit'
+alias gco='git checkout'
+alias gcm='git commit -m'
+alias gp='git push'
+alias gb='git branch -a'
+
+alias gdi='git diff'
+alias gdc='git diff --cached'
+alias gdh='git diff HEAD'
+
+alias gst='git status -s -b'
+alias gls="gls --color"
+alias glgg='git logg'
+alias glg='git logg | head'
+
+export LC_ALL=C
+
+alias rvmgl='rvm gemset list'
+alias rvmgc='rvm gemset create'
+alias rvmge='rvm gemset empty'
+alias rvmgu='rvm gemset use'
+alias rvmgd='rvm gemset delete'
+
+alias rgl='rvm gemset list'
+alias rgc='rvm gemset create'
+alias rge='rvm gemset empty'
+alias rgu='rvm gemset use'
+alias rgd='rvm gemset delete'
+
+#source ~/local/virtualenv/activate
