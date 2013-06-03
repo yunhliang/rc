@@ -109,4 +109,4 @@ alias rge='rvm gemset empty'
 alias rgu='rvm gemset use'
 alias rgd='rvm gemset delete'
 
-#source ~/local/virtualenv/activate
+alias cw='cd ~/workspace'
