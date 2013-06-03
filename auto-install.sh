@@ -12,7 +12,7 @@ die() {
 
 [ -e "~/.rc" ] && die "~/.rc already exists."
 
-git clone git://github.com/vgod/rc.git "$RCHOME"
+git clone https://github.com/JustinTW/rc.git "$RCHOME" --branch develop
 cd "$RCHOME"
 git submodule update --init
 
