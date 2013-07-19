@@ -85,23 +85,16 @@ alias gco='git checkout'
 alias gcm='git commit -m'
 alias gp='git push'
 alias gb='git branch -a'
+alias gpl='git pull'
 
-alias gdi='git diff'
+alias gd='git diff'
 alias gdc='git diff --cached'
 alias gdh='git diff HEAD'
 
 alias gst='git status -s -b'
-alias gls="gls --color"
-alias glgg='git logg'
-alias glg='git logg | head'
+alias gl='git log'
 
 export LC_ALL=C
-
-alias rvmgl='rvm gemset list'
-alias rvmgc='rvm gemset create'
-alias rvmge='rvm gemset empty'
-alias rvmgu='rvm gemset use'
-alias rvmgd='rvm gemset delete'
 
 alias rgl='rvm gemset list'
 alias rgc='rvm gemset create'
