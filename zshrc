@@ -85,7 +85,7 @@ alias gco='git checkout'
 alias gcm='git commit -m'
 alias gp='git push'
 alias gb='git branch -a'
-alias gpl='git pull'
+alias gpl='git stash && git pull & git stash pop'
 
 alias gd='git diff'
 alias gdc='git diff --cached'
@@ -103,3 +103,4 @@ alias rgu='rvm gemset use'
 alias rgd='rvm gemset delete'
 
 alias cw='cd ~/workspace'
+
