@@ -65,7 +65,6 @@ alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 
-<<<<<<< HEAD
 ## Del
 # Delete key (see FreeBSD FAQ on keyboard and mouse)
 bindkey "\e[3~"   delete-char              # xterm
@@ -104,7 +103,12 @@ alias rgu='rvm gemset use'
 alias rgd='rvm gemset delete'
 
 alias cw='cd ~/workspace'
-=======
+
+alias vgs='vagrant ssh'
+alias vgu='vagrant up'
+alias vgr='vagrant halt && vagrant up'
+alias vgdr='vagrant destroy -f && vagrant up'
+
 # psql
 export PSQL_EDITOR='vim +"set syntax=sql"'
 export YELLOW=`echo -e '\033[1;33m'`
@@ -113,8 +117,8 @@ export NOCOLOR=`echo -e '\033[0m'`
 
 export LESS="-iMSx4 -FXR"
 
-PAGER="sed \"s/\([[:space:]]\+-[0-9.]\+\)$/${LIGHT_CYAN}\1$NOCOLOR/;" 
-PAGER+="s/\([[:space:]]\+[0-9.\-]\+[[:space:]]\)/${LIGHT_CYAN}\1$NOCOLOR/g;" 
+PAGER="sed \"s/\([[:space:]]\+-[0-9.]\+\)$/${LIGHT_CYAN}\1$NOCOLOR/;"
+PAGER+="s/\([[:space:]]\+[0-9.\-]\+[[:space:]]\)/${LIGHT_CYAN}\1$NOCOLOR/g;"
 PAGER+="s/|/$YELLOW|$NOCOLOR/g;s/^\([-+]\+\)/$YELLOW\1$NOCOLOR/\" 2>/dev/null  | less"
 export PAGER
 
@@ -123,5 +127,4 @@ export PATH=$PATH:$HOME/.rc/fasd
 eval "$(fasd --init auto)"
 
 alias v='f -e vim' # quick opening files with vim
->>>>>>> c3211ea064cfaefcc5d29bf3f8f5701e3fa0f18b
 
