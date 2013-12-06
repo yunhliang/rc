@@ -106,6 +106,8 @@ alias cw='cd ~/workspace'
 
 alias vgs='vagrant ssh'
 alias vgu='vagrant up'
+alias vgus='vagrant up && vagrant ssh'
+alias vgh='vagrant halt'
 alias vgr='vagrant halt && vagrant up'
 alias vgdr='vagrant destroy -f && vagrant up'
 
@@ -126,5 +128,6 @@ export PAGER
 export PATH=$PATH:$HOME/.rc/fasd
 eval "$(fasd --init auto)"
 
-alias v='f -e vim' # quick opening files with vim
+alias v='f -e subl' # quick opening files with sublime
 
+alias stt='subl .'
