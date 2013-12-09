@@ -128,6 +128,7 @@ export PAGER
 export PATH=$PATH:$HOME/.rc/fasd
 eval "$(fasd --init auto)"
 
-alias v='f -e subl' # quick opening files with sublime
+alias v='f -e vim' # quick opening files with vim
 
 alias stt='subl .'
+
