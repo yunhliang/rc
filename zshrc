@@ -32,7 +32,7 @@ ZSH_THEME="blinks-venv"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx python screen ssh-agent autojump coffee git-flow git-remote-branch vi-mode virtualenvwrapper)
+plugins=(git osx python screen ssh-agent autojump coffee git-flow git-remote-branch vi-mode virtualenvwrapper tmux)
 
 source $ZSH/oh-my-zsh.sh
 
