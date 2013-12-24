@@ -109,6 +109,7 @@ alias vgu='vagrant up'
 alias vgus='vagrant up && vagrant ssh'
 alias vgh='vagrant halt'
 alias vgr='vagrant halt && vagrant up'
+alias vgd='vagrant destroy -f'
 alias vgdr='vagrant destroy -f && vagrant up'
 
 # psql
