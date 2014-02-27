@@ -12,6 +12,8 @@ die() {
 
 [ -e "~/.rc" ] && die "~/.rc already exists."
 
+mkdir -p ~/.ssh
+
 git clone https://github.com/JustinTW/rc.git "$RCHOME" --branch develop
 cd "$RCHOME"
 git submodule update --init
