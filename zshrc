@@ -33,7 +33,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git python screen ssh-agent autojump coffee git-flow git-remote-branch virtualenvwrapper tmux vagrant debian cp command-not-found last-working-dir )
+plugins=(git python screen ssh-agent autojump coffee git-flow git-remote-branch tmux vagrant debian cp command-not-found last-working-dir )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,11 +107,11 @@ alias cw='cd ~/workspace'
 
 alias vgs='vagrant ssh'
 alias vgu='vagrant up'
-alias vgus='vagrant up && vagrant ssh'
+alias vgus='vagrant up $1 && vagrant ssh $1'
 alias vgh='vagrant halt'
-alias vgr='vagrant halt && vagrant up'
+alias vgr='vagrant halt $1 && vagrant up $1'
 alias vgd='vagrant destroy -f'
-alias vgdr='vagrant destroy -f && vagrant up'
+alias vgdr='vagrant destroy -f $1 && vagrant up $1'
 
 # psql
 export PSQL_EDITOR='vim +"set syntax=sql"'
