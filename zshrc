@@ -40,6 +40,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+
 # vi key binding
 bindkey '^R' history-incremental-search-backward
 export EDITOR=vim
