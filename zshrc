@@ -1,8 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.rc/oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="blinks-venv"
@@ -68,6 +66,8 @@ alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 
+alias -g gbp='git-buildpackage'
+
 ## Del
 # Delete key (see FreeBSD FAQ on keyboard and mouse)
 bindkey "\e[3~"   delete-char              # xterm
@@ -109,11 +109,12 @@ alias cw='cd ~/workspace'
 
 alias vgs='vagrant ssh'
 alias vgu='vagrant up'
-alias vgus='vagrant up $1 && vagrant ssh $1'
+#alias vgus='vagrant up $1 && vagrant ssh $1'
 alias vgh='vagrant halt'
-alias vgr='vagrant halt $1 && vagrant up $1'
+#alias vgr='vagrant halt $1 && vagrant up $1'
 alias vgd='vagrant destroy -f'
-alias vgdr='vagrant destroy -f $1 && vagrant up $1'
+#alias vgdr='vagrant destroy -f $1 && vagrant up $1'
+alias vgp='vagrant provision'
 
 # psql
 export PSQL_EDITOR='vim +"set syntax=sql"'
@@ -139,5 +140,20 @@ alias stt='subl .'
 function git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
   echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+}
+
+function vgus(){
+vagrant up $1 && vagrant ssh $1
+return
+}
+
+function vgr(){
+vagrant halt $1 && vagrant up $1 && vagrant ssh $1
+return
+}
+
+function vgdr(){
+vagrant destroy -f $1 && vagrant up $1 && vagrant ssh $1
+return
 }
 
