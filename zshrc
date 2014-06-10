@@ -31,7 +31,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git python screen ssh-agent autojump coffee git-flow git-remote-branch tmux vagrant debian cp command-not-found last-working-dir )
+plugins=(git python screen ssh-agent autojump coffee git-flow git-remote-branch tmux vagrant debian cp command-not-found last-working-dir docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -56,6 +56,8 @@ export SAVEHIST=10000
 export HISTFILE=~/.zhistory
 # # append command to history file once executed
 setopt APPEND_HISTORY
+
+setopt inc_append_history share_history
 
 # virtualenv and virtualenvwrapper
 export VIRTUAL_ENV_DISABLE_PROMPT='1'
