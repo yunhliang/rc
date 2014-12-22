@@ -45,7 +45,7 @@ bindkey '^R' history-incremental-search-backward
 export EDITOR=vim
 
 source $ZSH/plugins/history-substring-search/history-substring-search.zsh
-
+bindkey '^[OA' history-substring-search-up
 
 # HISTORY
 # number of lines kept in history
@@ -57,6 +57,18 @@ export HISTFILE=~/.zhistory
 # # append command to history file once executed
 setopt APPEND_HISTORY
 
+setopt hist_expire_dups_first
+setopt hist_find_no_dups
+setopt hist_ignore_all_dups
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_no_store
+setopt hist_reduce_blanks
+setopt hist_save_no_dups
+setopt hist_verify
+setopt inc_append_history
+setopt no_hist_allow_clobber
+setopt no_hist_beep
 setopt inc_append_history share_history
 
 # virtualenv and virtualenvwrapper
